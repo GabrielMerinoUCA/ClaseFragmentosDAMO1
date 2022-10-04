@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.navegacion.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/menu_suma"
+            app:destination="@id/sumaFragment" />
+        <action
+            android:id="@+id/menu_resta"
+            app:destination="@id/restaFragment" />
+    </fragment>
+
+    <!--fragment suma-->
+    <fragment
+        android:id="@+id/sumaFragment"
+        android:name="com.example.navegacion.SumaFragment"
+        android:label="fragment_suma"
+        tools:layout="@layout/fragment_suma" />
+
+    <fragment
+        android:id="@+id/restaFragment"
+        android:name="com.example.navegacion.RestaFragment"
+        android:label="fragment_resta"
+        tools:layout="@layout/fragment_resta" />
+</navigation>
